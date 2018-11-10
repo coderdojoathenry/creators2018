@@ -9,10 +9,12 @@ function setup() {
     ballX = width/2;
     ballY = height/2;
     ballSize=100;
-    background("LightSkyBlue");
+
 }
 
 function draw() {
+    background("LightSkyBlue");
+
     // move the ball
     ballX = ballX + ballXSpeed;
     ballY = ballY + ballYSpeed;
