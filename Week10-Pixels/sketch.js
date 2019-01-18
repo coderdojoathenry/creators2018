@@ -1,4 +1,4 @@
-var fadeFrames = 200;
+let fadeFrames = 200;
 
 function setup() {
     createCanvas(800, 600);
@@ -9,7 +9,7 @@ function draw(){
     drawPicture();
     loadPixels();
 
-    var fadeAmount = 1.0;
+    let fadeAmount = 1.0;
     if (frameCount < fadeFrames){
         fadeAmount = frameCount / fadeFrames;
     }
@@ -22,10 +22,10 @@ function draw(){
 }
 
 function fade(amount){
-    for (var i = 0; i < width; i++){
-        for (var j = 0; j < height; j++){
-            var c = getPixel(i, j);
-            var cnew = [c[0] * amount,
+    for (let i = 0; i < width; i++){
+        for (let j = 0; j < height; j++){
+            let c = getPixel(i, j);
+            let cnew = [c[0] * amount,
                         c[1] * amount,
                         c[2] * amount];
 
@@ -35,10 +35,10 @@ function fade(amount){
 }
 
 function invert(){
-    for (var i = 0; i < width; i++){
-        for (var j = 0; j < height; j++){
-            var c = getPixel(i, j);
-            var cnew = [255 - c[0],
+    for (let i = 0; i < width; i++){
+        for (let j = 0; j < height; j++){
+            let c = getPixel(i, j);
+            let cnew = [255 - c[0],
                         255 - c[1],
                         255 - c[2]];
 
@@ -48,15 +48,15 @@ function invert(){
 }
 
 function vignette(amount){
-    for (var i = 0; i < width; i++){
-        for (var j = 0; j < height; j++){
-            var minDist = Math.min(i, width - i, j, height - j);
-            var fade = 1.0;
+    for (let i = 0; i < width; i++){
+        for (let j = 0; j < height; j++){
+            let minDist = Math.min(i, width - i, j, height - j);
+            let fade = 1.0;
             if (minDist < amount){
                 fade = minDist / amount;
             }
-            var c = getPixel(i, j);
-            var cnew = [c[0] * fade,
+            let c = getPixel(i, j);
+            let cnew = [c[0] * fade,
                         c[1] * fade,
                         c[2] * fade];
 
@@ -76,7 +76,7 @@ function drawPicture() {
 }
 
 function getPixel(x, y){
-    var loc = 4 * ((y * width) + x);
+    let loc = 4 * ((y * width) + x);
 
     return [pixels[loc + 0],
             pixels[loc + 1],
@@ -84,7 +84,7 @@ function getPixel(x, y){
 }
 
 function setPixel(x, y, c){
-    var loc = 4 * ((y * width) + x);
+    let loc = 4 * ((y * width) + x);
 
     pixels[loc + 0] = c[0];
     pixels[loc + 1] = c[1];
