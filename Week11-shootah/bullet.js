@@ -3,10 +3,14 @@ class Bullet {
         this.x = x;
         this.y = y;        
         this.speed = 10;
+        this.active = true;
     }
 
     move(){
         this.y = this.y - this.speed;
+        if (this.y < 0){
+            this.active = false;
+        }
     }
 
     show(){
