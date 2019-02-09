@@ -4,6 +4,7 @@ class Enemy{
       this.y = y;
       this.speed = speed;
       this.img = img;
+      this.collider = new Collider(this, "enemy", 100, 100);
     }
 
     move(){
@@ -17,5 +18,9 @@ class Enemy{
         imageMode(CENTER);
         image(this.img, this.x, 
             this.y, 100, 100);
+    }
+
+    hit(desc){
+        console.log("I was hit by " + desc);
     }
 }

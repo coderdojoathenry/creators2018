@@ -11,7 +11,8 @@ class Player {
     }
 
     move(){
-        this.x+=this.speed;
+        this.x += this.speed;
+        this.speed = this.speed * 0.97;
     }
 
     show(){

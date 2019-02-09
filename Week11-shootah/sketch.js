@@ -26,8 +26,24 @@ function draw() {
     enemy.show();
 
     manageBullets();
+    manageColliders();
 
     checkKeys();    
+}
+
+function manageColliders(){
+    let c = [];
+
+    c.push(enemy.collider);
+    for (let i = 0; i < bullets.length; i++){
+        c.push(bullets[i].collider);
+    }
+
+    for (let i = 0; i < c.length - 1; i++){
+        for (let j = i + 1; j < c.length; j++){
+            c[i].touching(c[j]);
+        }
+    }
 }
 
 function manageBullets(){
@@ -56,13 +72,15 @@ function keyPressed(){
     }
 }
 
-function checkKeys(){   
-    if(keyCode==LEFT_ARROW){
-        player.setSpeed(-5);
+function checkKeys(){ 
+    if (keyIsPressed){
+        if(keyCode==LEFT_ARROW){
+            player.setSpeed(-5);
+        }
+        if(keyCode==RIGHT_ARROW){
+            player.setSpeed(5);
+        } 
     }
-    if(keyCode==RIGHT_ARROW){
-        player.setSpeed(5);
-    } 
 }
 
 
