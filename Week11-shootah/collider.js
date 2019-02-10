@@ -26,7 +26,7 @@ class Collider {
         // Above  us
         if (b.t < a.t && b.b < a.t) return false;
         // Below  us
-        if (b.b > a.b && b.b > a.b) return false;
+        if (b.t > a.b && b.b > a.b) return false;
 
         this.connected.hit(other.desc);
         other.connected.hit(this.desc);
