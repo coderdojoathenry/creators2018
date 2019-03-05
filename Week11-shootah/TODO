@@ -1,9 +1,9 @@
 TODO
 
-* No more infinite bullets!
+- No more infinite bullets!
 * Check edges so spaceship doesn't disappear
-* Enemies
-* Collision detection
+- Enemies
+- Collision detection
 * Enemies shoot back (bombs)
 * Lives/score
 * Levels (we won't do this, you might...)

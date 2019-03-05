@@ -28,8 +28,8 @@ class Collider {
         // Below  us
         if (b.t > a.b && b.b > a.b) return false;
 
-        this.connected.hit(other.desc);
-        other.connected.hit(this.desc);
+        this.connected.hit(other);
+        other.connected.hit(this);
         
         // Touching
         return true;

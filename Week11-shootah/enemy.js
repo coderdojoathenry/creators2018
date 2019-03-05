@@ -20,7 +20,7 @@ class Enemy{
             this.y, 100, 100);
     }
 
-    hit(desc){
-        console.log("I was hit by " + desc);
+    hit(other){
+        console.log("I was hit by " + other.desc);
     }
 }

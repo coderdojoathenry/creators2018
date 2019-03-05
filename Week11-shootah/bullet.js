@@ -21,8 +21,11 @@ class Bullet {
         pop();
     }
 
-    hit(desc){
-        console.log("I was hit by " + desc);
+    hit(other){
+        if (other.desc == 'player'){
+            return;
+        }
+        console.log("I was hit by " + other.desc);
         this.active=false;
     }
 }

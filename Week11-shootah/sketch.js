@@ -4,6 +4,8 @@ let bulletSound;
 let enemy;
 let enemyImage;
 let bullets = []; 
+let leftEdge;
+let rightEdge;
 
 function preload(){
     playerImage = loadImage("images/spaceship.png");
@@ -15,6 +17,9 @@ function setup() {
     createCanvas(innerWidth-50, innerHeight-50);
     player = new Player(width/2, playerImage);
     enemy = new Enemy(100, 1, enemyImage);
+
+    leftEdge = new Static(0, height/2, 10, height);
+    rightEdge = new Static(width, height/2, 10, height);
 }
 
 function draw() {
@@ -34,7 +39,11 @@ function draw() {
 function manageColliders(){
     let c = [];
 
+    c.push(leftEdge.collider);
+    c.push(rightEdge.collider);
+    c.push(player.collider);
     c.push(enemy.collider);
+    
     for (let i = 0; i < bullets.length; i++){
         c.push(bullets[i].collider);
     }
