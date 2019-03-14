@@ -14,6 +14,12 @@ class Enemy{
       }
     }
 
+    shoot(){
+      if (random(200) < 5){
+        projectiles.push(new Bomb(this.x, this.y));
+      }
+    }
+
     show(){
         imageMode(CENTER);
         image(this.img, this.x, 
