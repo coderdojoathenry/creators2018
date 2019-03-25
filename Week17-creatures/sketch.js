@@ -11,9 +11,9 @@ function setup() {
     textFont(font);
     points = font.textToPoints("Creators", 100, height/2, 300);
     
-    for(let i=0; i< points.length; i+=2){
+    for(let i=0; i< points.length; i++){
         let startPosition=createVector(points[i].x, points[i].y);
-        movers.push(new Mover(20, startPosition));
+        movers.push(new Mover(random(10,30), startPosition));
     }
 }
 
