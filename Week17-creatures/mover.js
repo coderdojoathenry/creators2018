@@ -2,7 +2,7 @@ class Mover{
     constructor(size, home){
         this.size=size;
         this.mass=this.size;
-        this.position=createVector(random(width),random(height));
+        this.position=createVector(random(-200, width+200),random(-200, height+200));
         this.home = home;
         this.acceleration=createVector(0,0);
         this.velocity=createVector(0,0);

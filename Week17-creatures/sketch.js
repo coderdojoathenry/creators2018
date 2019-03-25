@@ -25,7 +25,7 @@ function draw() {
     for(let i=0; i< movers.length; i++){   
         movers[i].applyBehaviours(); 
         movers[i].move();
-        movers[i].checkEdges();
+        // movers[i].checkEdges();
         movers[i].show();    
     }    
 }
