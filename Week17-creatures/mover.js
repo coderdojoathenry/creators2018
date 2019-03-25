@@ -1,9 +1,9 @@
 class Mover{
-    constructor(size, position){
+    constructor(size, home){
         this.size=size;
         this.mass=this.size;
-        this.position=position;
-        this.home = position.copy();
+        this.position=createVector(random(width),random(height));
+        this.home = home;
         this.acceleration=createVector(0,0);
         this.velocity=createVector(0,0);
         this.isAfraid = false;
