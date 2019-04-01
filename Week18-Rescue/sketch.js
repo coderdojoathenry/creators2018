@@ -8,7 +8,7 @@ let score = 0;
 function setup() {
     createCanvas(800, 600);
     
-    plane = new Plane(50, 30, 2);
+    plane = new Plane(100, 30, 2);
     ground = new Ground(0.005, 100, height - 100);
 }
 
