@@ -30,7 +30,7 @@ function draw() {
     // draw building, road
     push();
     fill(50)
-    rect(15, 20, width - 30, height - 100);
+    rect(15, 40, width - 30, height - 100);
     fill(100)
     rect(0, height - 100, width, 150);
     pop();
