@@ -4,7 +4,7 @@ class Car {
         this.y=height-30;
         this.speed=5;
         
-        this.carList= ["🚗", "🚚", "🚛", "🚕", "🚜"];
+        this.carList= ["🚗", "🚚", "🚛", "🚕", "🚽", "🚜"];
         this.symbol = random(this.carList);
     }
 
